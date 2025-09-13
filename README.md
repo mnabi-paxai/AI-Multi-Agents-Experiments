@@ -24,8 +24,12 @@ Agents are framed as **Brain (LLM)**, **Memory**, and **Tools**.
 ---
 
 ## Neuro-San Studio
+
 I tried [Neuro-San Studio](https://github.com/cognizant-ai-lab/neuro-san-studio?tab=readme-ov-file).  
+
+<!--
 I could run the examples, but I’m still working on implementing my own example for cap table updates.  
+-->
 
 ---
 
