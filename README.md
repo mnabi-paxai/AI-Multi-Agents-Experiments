@@ -64,9 +64,13 @@ Output:
 
 ---
 
-## Resources
+## Potential Applications
 - **YouTube**: Find the best videos on AI agents and summarize takeaways.  
 - **Podcasts**: Collect top episodes, with notes on what worked and what didn’t.  
+
+---
+
+## Resources
 
 ---
 
