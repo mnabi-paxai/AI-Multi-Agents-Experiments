@@ -43,7 +43,8 @@ I could run the examples, but I’m still working on implementing my own example
 
 [![Demo Video](assets/Simple-first-AIAssistant-Hike.png)](https://www.youtube.com/watch?v=EH5jx5qPabU)
 
-
+#### Summary
+Gets a list of hikes in Zip Code X, gets the weather, gets my calendar, gets air quality -------> Suggets wwhat hike/run to do
 
 #### Key points:  
 - **Agents = Brain (LLM), Memory, Tools**  
@@ -56,15 +57,22 @@ I could run the examples, but I’m still working on implementing my own example
 
 #### Agent Prompts
 Structure for designing an agent prompt:
-Role:
-Task:
-Input:
-Tools:
-Constraints:
-Output:
+- **Role** – what kind of assistant is it?  
+- **Task** – what is it trying to accomplish?  
+- **Input** – what data does it have access to?  
+- **Tools** – which actions can it take?  
+- **Constraints** – what rules should it follow?  
+- **Output** – what should the final result look like? 
+
+[Open agent-hike-prompt.txt](assets/agent-hike-prompt.txt)
 
 
-<img src="assets/AgentPrompt.png" alt="Agent prompt template" width="640">
+<!--
+<img src="assets/AgentPrompt.png" alt="Agent prompt template" width="540">
+-->
+
+#### What can go wrong?
+
 
 ---
 
