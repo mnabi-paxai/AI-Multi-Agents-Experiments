@@ -30,10 +30,11 @@ I could run the examples, but I’m still working on implementing my own example
 ---
 
 ## Simple Agents
-### Summary from this YouTube video
+
+### First AI Agent
 [![Watch the video](https://img.youtube.com/vi/EH5jx5qPabU/hqdefault.jpg)](https://www.youtube.com/watch?v=EH5jx5qPabU)
 
-Key points:  
+#### Key points:  
 - **Agents = Brain (LLM), Memory, Tools**  
 - **API Requests**  
   - **GET** → pulling information  
@@ -43,7 +44,7 @@ Key points:
 
 ---
 
-### Agent Prompts
+#### Agent Prompts
 Structure for designing an agent prompt:
 Role:
 Task:
