@@ -86,4 +86,4 @@ PRs welcome! Open an issue or submit a pull request if you’d like to collabora
 ---
 
 ## License
-MIT © You
+MIT © PaxAI
