@@ -35,7 +35,7 @@ I could run the examples, but I’m still working on implementing my own example
 [![Watch the video](https://img.youtube.com/vi/EH5jx5qPabU/hqdefault.jpg)](https://www.youtube.com/watch?v=EH5jx5qPabU)
 
 
-[![Demo Video](Simple-first-AIAssistant-Hike.png)](https://www.youtube.com/watch?v=EH5jx5qPabU)
+[![Demo Video](assets/Simple-first-AIAssistant-Hike.png)](https://www.youtube.com/watch?v=EH5jx5qPabU)
 
 
 
