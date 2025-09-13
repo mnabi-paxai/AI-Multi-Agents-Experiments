@@ -49,7 +49,6 @@ I could run the examples, but I’m still working on implementing my own example
 - **API** = set of available actions or options  
 - **HTTP Request** = a specific instruction to perform one of those actions/options  
 
----
 
 #### Agent Prompts
 Structure for designing an agent prompt:
