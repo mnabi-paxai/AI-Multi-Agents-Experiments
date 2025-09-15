@@ -73,7 +73,18 @@ Structure for designing an agent prompt:
 
 #### What can go wrong?
 
+---
 
+### AI Blog to Podcast Agent
+
+#### Reference
+[AI Blog to Podcast Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/starter_ai_agents/ai_blog_to_podcast_agent)
+
+
+#### Summary
+
+
+---
 ---
 
 ## Notes & Questions
