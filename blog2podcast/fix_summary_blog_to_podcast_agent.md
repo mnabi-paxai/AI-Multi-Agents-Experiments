@@ -37,7 +37,22 @@
   echo "$FIRECRAWL_API_KEY" | sed 's/./*/g'
   ```
 
-### 5. Final Run
+### 5. Setup the invironment
+- **Fix:** Rebuild the virtual environment to ensure all dependencies install with the correct Python version.
+  ```bash
+  # Delete old venv
+  rm -rf .venv  
+
+  # Create new venv with Python 3.12
+  python3.12 -m venv .venv  
+
+  # Activate and install dependencies
+  source .venv/bin/activate
+  pip install --upgrade pip
+  pip install -r requirements.txt
+
+
+### 6. Final Run
 - Start the app once all dependencies and env vars are set:
   ```bash
   python -m streamlit run blog_to_podcast_agent.py

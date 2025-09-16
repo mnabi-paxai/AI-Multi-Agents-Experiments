@@ -78,6 +78,10 @@ Structure for designing an agent prompt:
 ### AI Blog to Podcast Agent
 
 #### Reference
+
+[![I Blog to Podcast Agent](assets/blog2podcast.png)](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/starter_ai_agents/ai_blog_to_podcast_agent)
+
+
 [AI Blog to Podcast Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/starter_ai_agents/ai_blog_to_podcast_agent)
 
 
@@ -87,6 +91,18 @@ This is a Streamlit-based application that allows users to convert any blog post
 #### Fix the code
 
 [open fix_summary_blog_to_podcast_agent.md](blog2podcast/fix_summary_blog_to_podcast_agent.md)
+
+---
+
+### AI Data Analysis Agent
+
+#### Reference
+[AI Data Analysis Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/starter_ai_agents/ai_data_analysis_agent)
+
+
+#### Summary
+An AI data analysis Agent built using the Agno Agent framework and Openai's gpt-4o model. This agent helps users analyze their data - csv, excel files through natural language queries, powered by OpenAI's language models and DuckDB for efficient data processing - making data analysis accessible to users regardless of their SQL expertise.
+
 
 
 ---
