@@ -1,4 +1,4 @@
-# AI-Multi-Agents-Experiments - V2
+# AI-Multi-Agents-Experiments 
 _On a mission to find bugs in our current thinking about AI agents._
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](#license)
