@@ -3,10 +3,28 @@ import tempfile
 import csv
 import streamlit as st
 import pandas as pd
+from phi.model.openai import OpenAIChat
+from phi.agent.duckdb import DuckDbAgent
+from phi.tools.pandas import PandasTools
+import re
+
+from dotenv import load_dotenv
+import os
+
+
+
+'''
 from agno.models.openai import OpenAIChat
 from phi.agent.duckdb import DuckDbAgent
 from agno.tools.pandas import PandasTools
-import re
+from agno.agent.duckdb import DuckDbAgent
+
+'''
+
+
+
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
+
 
 # Function to preprocess and save the uploaded file
 def preprocess_and_save(file):
@@ -86,6 +104,7 @@ if uploaded_file is not None and "openai_key" in st.session_state:
         }
         
         # Initialize the DuckDbAgent for SQL query generation
+        '''
         duckdb_agent = DuckDbAgent(
             model=OpenAIChat(model="gpt-4", api_key=st.session_state.openai_key),
             semantic_model=json.dumps(semantic_model),
@@ -96,6 +115,22 @@ if uploaded_file is not None and "openai_key" in st.session_state:
             read_tool_call_history=False,  # Disable reading tool call history
             system_prompt="You are an expert data analyst. Generate SQL queries to solve the user's query. Return only the SQL query, enclosed in ```sql ``` and give the final answer.",
         )
+        '''
+        duckdb_agent = DuckDbAgent(
+            model=OpenAIChat(model="gpt-4o", api_key=st.session_state.openai_key),
+            semantic_model=json.dumps(semantic_model),
+            tools=[PandasTools()],
+            markdown=True,
+            add_history_to_messages=False,
+            followups=False,
+            read_tool_call_history=False,
+            system_prompt=(
+                "You are an expert data analyst. Generate SQL queries to solve the user's query. "
+                "Return only the SQL query, enclosed in ```sql ``` and give the final answer."
+            ),
+        )
+
+
         
         # Initialize code storage in session state
         if "generated_code" not in st.session_state:

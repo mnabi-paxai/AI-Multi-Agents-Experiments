@@ -79,7 +79,7 @@ Structure for designing an agent prompt:
 
 #### Reference
 
-[![I Blog to Podcast Agent](assets/blog2podcast.png)](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/starter_ai_agents/ai_blog_to_podcast_agent)
+[![Blog to Podcast Agent](assets/blog2podcast.png)](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/starter_ai_agents/ai_blog_to_podcast_agent)
 
 
 [AI Blog to Podcast Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/starter_ai_agents/ai_blog_to_podcast_agent)
@@ -92,16 +92,129 @@ This is a Streamlit-based application that allows users to convert any blog post
 
 [open fix_summary_blog_to_podcast_agent.md](blog2podcast/fix_summary_blog_to_podcast_agent.md)
 
+#### Agent Details
+Brain: LLM
+
+Tools: ElevenLabs (text to voice) and Firecrawl (blog crawling)
+
+ ```bash
+blog_to_podcast_agent = Agent(
+                    name="Blog to Podcast Agent",
+                    agent_id="blog_to_podcast_agent",
+                    model=OpenAIChat(id="gpt-4o"),
+                    tools=[
+                        ElevenLabsTools(
+                            voice_id="JBFqnCBsd6RMkjVDRZzb",
+                            model_id="eleven_multilingual_v2",
+                            target_directory="audio_generations",
+                        ),
+                        FirecrawlTools(),
+                    ],
+                    description="You are an AI agent that can generate audio using the ElevenLabs API.",
+                    instructions=[
+                        "When the user provides a blog URL:",
+                        "1. Use FirecrawlTools to scrape the blog content",
+                        "2. Create a concise summary of the blog content that is NO MORE than 2000 characters long",
+                        "3. The summary should capture the main points while being engaging and conversational",
+                        "4. Use the ElevenLabsTools to convert the summary to audio",
+                        "Ensure the summary is within the 2000 character limit to avoid ElevenLabs API limits",
+                    ],
+                    markdown=True,
+                    debug_mode=True,
+                )
+```
+
+#### What can go wrong?
+
+- Hard to debug
+  - too black box ... 
+- Other architectures:
+  - a deicison tree at the top
+    - pass the blog to fircrawl
+    - get the text based on url content - using LLM
+    - pass the podcast text to ElevenLabs
+- Comment: no need for the LLM to be the brain ... the steps are deterministic 
+
+
+
 ---
 
 ### AI Data Analysis Agent
 
 #### Reference
+
+[![AI Data Analysis Agent](assets/data_analyst_agent.png)](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/starter_ai_agents/ai_data_analysis_agent)
+
 [AI Data Analysis Agent](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/starter_ai_agents/ai_data_analysis_agent)
 
 
 #### Summary
 An AI data analysis Agent built using the Agno Agent framework and Openai's gpt-4o model. This agent helps users analyze their data - csv, excel files through natural language queries, powered by OpenAI's language models and DuckDB for efficient data processing - making data analysis accessible to users regardless of their SQL expertise.
+
+#### Fix the code
+Part 1 -
+```bash
+import json
+import tempfile
+import csv
+import streamlit as st
+import pandas as pd
+from phi.model.openai import OpenAIChat
+from phi.agent.duckdb import DuckDbAgent
+from phi.tools.pandas import PandasTools
+import re
+
+from dotenv import load_dotenv
+import os
+
+```
+
+Part 2 - 
+```bash
+duckdb_agent = DuckDbAgent(
+            model=OpenAIChat(model="gpt-4o", api_key=st.session_state.openai_key),
+            semantic_model=json.dumps(semantic_model),
+            tools=[PandasTools()],
+            markdown=True,
+            add_history_to_messages=False,
+            followups=False,
+            read_tool_call_history=False,
+            system_prompt=(
+                "You are an expert data analyst. Generate SQL queries to solve the user's query. "
+                "Return only the SQL query, enclosed in ```sql ``` and give the final answer."
+            ),
+        )
+ ```
+
+
+#### What can go wrong?
+- Hallucination in understanding the text
+- Hallucination in converting the text into SQL code
+
+---
+### AI System Architect Advisor with R1
+
+#### Reference
+[AI System Architect Advisor with R1](https://github.com/Shubhamsaboo/awesome-llm-apps/tree/main/advanced_ai_agents/single_agent_apps/ai_system_architect_r1)
+
+
+
+---
+### Cursor Agents
+
+[![Watch the video](https://img.youtube.com/vi/8QN23ZThdRY/maxresdefault.jpg)](https://www.youtube.com/watch?v=8QN23ZThdRY "Click to watch on YouTube")
+
+
+<!--
+[![Watch the video](https://img.youtube.com/vi/8QN23ZThdRY/hqdefault.jpg)](https://www.youtube.com/watch?v=8QN23ZThdRY)
+
+[![Demo Video](assets/Simple-first-AIAssistant-Hike.png)](https://www.youtube.com/watch?v=8QN23ZThdRY)
+-->
+
+
+---
+### AI Whatsapp Agent
+[![Watch the video](https://img.youtube.com/vi/d5I08v-GviE/maxresdefault.jpg)](https://www.youtube.com/shorts/d5I08v-GviE "Click to watch on YouTube")
 
 
 
