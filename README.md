@@ -33,7 +33,7 @@ I could run the examples, but I’m still working on implementing my own example
 
 ---
 
-## Simple Agents
+## Sample Agents
 
 ### First AI Agent - From Futurepedia
 <!--
@@ -202,7 +202,7 @@ duckdb_agent = DuckDbAgent(
 ---
 ### Cursor Agents
 
-[![Watch the video](https://img.youtube.com/vi/8QN23ZThdRY/maxresdefault.jpg)](https://www.youtube.com/watch?v=8QN23ZThdRY "Click to watch on YouTube")
+[![Watch the video](assets/cursor_agents.png)](https://www.youtube.com/watch?v=8QN23ZThdRY "Click to watch on YouTube")
 
 
 <!--
@@ -213,8 +213,23 @@ duckdb_agent = DuckDbAgent(
 
 
 ---
-### AI Whatsapp Agent
-[![Watch the video](https://img.youtube.com/vi/d5I08v-GviE/maxresdefault.jpg)](https://www.youtube.com/shorts/d5I08v-GviE "Click to watch on YouTube")
+### Whatsapp AI Agent - Attempt 1
+[![Watch the video](assets/Whatspp_try1.png)](https://www.youtube.com/shorts/d5I08v-GviE "Click to watch on YouTube")
+
+
+#### Summary
+Made it work for simple tasks of sending a message and respond with a general message
+
+#### What can go wrong?
+- Too much trouble with system prompt
+- Too much trouble debugging
+- Too much trouble with setting up accounts -- following up with instruction 
+
+
+### Whatsapp AI Agent - Attempt 2
+
+[![Watch the video](https://img.youtube.com/vi/A0OwvNOLNlw/hqdefault.jpg)](https://www.youtube.com/watch?v=A0OwvNOLNlw)
+
 
 
 
