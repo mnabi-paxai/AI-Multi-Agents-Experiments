@@ -33,7 +33,7 @@ I could run the examples, but I’m still working on implementing my own example
 
 ---
 
-## Sample Agents
+## AI Agents
 
 ### First AI Agent - From Futurepedia
 <!--
@@ -211,26 +211,50 @@ duckdb_agent = DuckDbAgent(
 [![Demo Video](assets/Simple-first-AIAssistant-Hike.png)](https://www.youtube.com/watch?v=8QN23ZThdRY)
 -->
 
+---
+
+### Whatsapp AI Agent - Attempt 1
+
+[![Watch the video](assets/whatsapp_basic.png)](https://www.youtube.com/watch?v=A0OwvNOLNlw)
+
+
+
 
 ---
-### Whatsapp AI Agent - Attempt 1
+### Whatsapp AI Agent - Attempt 2
 [![Watch the video](assets/Whatspp_try1.png)](https://www.youtube.com/shorts/d5I08v-GviE "Click to watch on YouTube")
 
 
 #### Summary
 Made it work for simple tasks of sending a message and respond with a general message
 
+
+#### Prompt
+```bash
+Role: You are a WhatsApp assistant that answers user queries using a Google Sheet dataset.  
+Task: Interpret each WhatsApp message. If it requires data, query the Google Sheet and return results.  
+Input: Natural language questions from WhatsApp users  
+Tools: Google Sheet for data lookup.  
+Constraints: Be concise, user-friendly. Don’t show query syntax. If no data is found, politely say so. Never make up answers.  
+Output: A plain WhatsApp message with the result (or fallback if unavailable).
+```
+
 #### What can go wrong?
-- Too much trouble with system prompt
 - Too much trouble debugging
+- Too much trouble with system prompt
 - Too much trouble with setting up accounts -- following up with instruction 
 
 
-### Whatsapp AI Agent - Attempt 2
+---
+---
 
-[![Watch the video](https://img.youtube.com/vi/A0OwvNOLNlw/hqdefault.jpg)](https://www.youtube.com/watch?v=A0OwvNOLNlw)
+## MCP Examples
 
+### Read Emails
 
+#### Summary
+
+I have about 100 emails in my mailbox. I want to chnage them to read and give me a summary of the important messages. 
 
 
 ---
