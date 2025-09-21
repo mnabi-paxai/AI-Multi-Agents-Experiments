@@ -250,11 +250,35 @@ Output: A plain WhatsApp message with the result (or fallback if unavailable).
 
 ## MCP Examples
 
+### Claude and MCP applications
+
+
+[![Watch the video](https://img.youtube.com/vi/GOHdTwKdT14/hqdefault.jpg)](https://www.youtube.com/watch?v=GOHdTwKdT14 "Click to watch on YouTube")
+
+
+---
+
 ### Read Emails
 
 #### Summary
 
 I have about 100 emails in my mailbox. I want to chnage them to read and give me a summary of the important messages. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ---
