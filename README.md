@@ -9,7 +9,8 @@ _On a mission to find bugs in our current thinking about AI agents._
 ## Table of Contents
 - [Overview](#overview)
 - [Neuro-San Studio](#neuro-san-studio)
-- [Simple Agents](#simple-agents)
+- [AI Agents](#ai-agents)
+- [MCP Examples](#mcp-examples)
 - [Notes & Questions](#notes--questions)
 - [Resources](#resources)
 - [Contributing](#contributing)
